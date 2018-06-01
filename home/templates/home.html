@@ -46,52 +46,20 @@
             </div>
             <br>
             <br>
-            <div class="row text-center pad-bottom" data-scroll-reveal="enter from the bottom after 0.4s">
-                <div class="col-md-3 serviceCard">
+            {% for service in services %}
+            <div class="row text-center serviceRow">
+                <div class="col-sm-3 col-lg-3 serviceCard">
                     <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                    <h4><strong>Service Name # 1 </strong></h4>
-                    Consectetur adipiscing elit felis dolor felis dolor vitae.Eelit felis dolor vitae felis dolor vitae
+                    <h4><strong>{{ service.name }}</strong></h4>
+                     <p>€{{ service.price }}</p>
+                     <a class="btn btn-default readButton" href ="http://valet-wolfenchic.c9users.io:8080/services/">Read More</a>
+                     <a class="btn btn-default addButton" href ="#">Quick Add</a>
                 </div>
-                <div class="col-md-3 serviceCard">
-                     <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                    <h4><strong>Service Name # 2 </strong></h4>
-                    Consectetur adipiscing elit felis dolor felis dolor vitae.Eelit felis dolor vitae felis dolor vitae
-                </div>
-                <div class="col-md-3 serviceCard">
-                     <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                    <h4><strong>Service Name # 3 </strong></h4>
-                    Consectetur adipiscing elit felis dolor felis dolor vitae.Eelit felis dolor vitae felis dolor vitae
-                </div>
-                <div class="col-md-3 serviceCard">
-                     <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                    <h4><strong>Service Name # 4 </strong></h4>
-                    Consectetur adipiscing elit felis dolor felis dolor vitae.Eelit felis dolor vitae felis dolor vitae
-                </div>
-            </div>
-            <div class="row text-center" data-scroll-reveal="enter from the bottom after 0.6s">
-                <div class="col-md-3 serviceCard">
-                    <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                    <h4><strong>Service Name # 5 </strong></h4>
-                    Consectetur adipiscing elit felis dolor felis dolor vitae.Eelit felis dolor vitae felis dolor vitae
-                </div>
-                <div class="col-md-3 serviceCard">
-                     <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                    <h4><strong>Service Name # 6 </strong></h4>
-                    Consectetur adipiscing elit felis dolor felis dolor vitae.Eelit felis dolor vitae felis dolor vitae
-                </div>
-                <div class="col-md-3 serviceCard">
-                    <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                    <h4><strong>Service Name # 7 </strong></h4>
-                    Consectetur adipiscing elit felis dolor felis dolor vitae.Eelit felis dolor vitae felis dolor vitae
-                </div>
-                <div class="col-md-3 serviceCard">
-                    <i class="fa fa-car fa-3x" aria-hidden="true"></i>
-                    <h4><strong>Service Name # 8 </strong></h4>
-                    Consectetur adipiscing elit felis dolor felis dolor vitae.Eelit felis dolor vitae felis dolor vitae
-                </div>
-            </div>
-        </div>
+                 {% endfor %}
+                 </div>
+               
     </section>
+   
     
     <hr>
     

@@ -75,3 +75,25 @@ margin-top: 0px;
     padding: 20px 20px 20px 20px;
     
 }
+
+.readButton {
+    background-color: #122386;
+    color: white;
+}
+
+.addButton {
+    background-color: #EB8732;
+    color: white;
+}
+
+.serviceRow {
+    margin: auto;
+    text-align: center;
+   
+}
+
+.serviceCard {
+    margin: 20px;
+    padding: 20px 20px 20px 20px;
+    border: 1px solid gray;
+}

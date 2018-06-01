@@ -18,8 +18,11 @@ from django.contrib import admin
 from home.views import get_home_page
 from django.views.static import serve
 from django.conf import settings
+from services.views import get_services_page
+from services import urls as services_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', get_home_page, name='home')
+    url(r'^$', get_home_page, name='home'), 
+    url(r'^services/', include(services_urls))
 ]
