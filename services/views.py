@@ -7,3 +7,4 @@ from .models import Services
 def get_services_page(request):
     services = Services.objects.all()
     return render(request, 'services.html', {'services': services})
+

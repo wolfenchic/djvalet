@@ -43,9 +43,16 @@
                 </div>
                 <div id="navbar" class="nav navbar-nav navbar-right collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">About</a></li>
+                         {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}">Profile <i class="fa fa-user"></i></a></li>
+                    <li><a href="{% url 'logout' %}">Log Out <i class="fa fa-sign-out"></i></a></li>
+                    {% else %}
+                    <li><a href="{% url 'register' %}">Register <i class="fa fa-user-plus"></i></a></li>
+                    <li><a href="{% url 'login' %}">Log In <i class="fa fa-sign-in"></i></a></li>
+                    {% endif %}
+                        
                         <li><a href="#">Services</a></li>
-                        <li><a href="#">Reservation</a></li>
+                       
                         <li><a href="#">Products</a></li>
                          <li><a href="#">Contact</a></li>
                     </ul>
@@ -56,6 +63,16 @@
     
  
      
+
+    {% if messages %}
+    <div class="alert alert-success">
+        <div class="messages">
+            {% for message in messages %} {{ message }} {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+
 
  <div class="container-fluid">
         {% block content %} {% endblock %}
