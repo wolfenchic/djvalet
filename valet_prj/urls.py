@@ -21,6 +21,8 @@ from django.views.static import serve
 from django.conf import settings
 from services.views import get_services_page
 from services import urls as services_urls
+from cart import urls as cart_urls
+from checkout import urls as checkout_urls
 
 
 urlpatterns = [
@@ -28,5 +30,6 @@ urlpatterns = [
      url(r'^accounts/', include(accounts_urls)),
     url(r'^$', get_home_page, name='home'), 
     url(r'^services/', include(services_urls)), 
-   
+    url(r'^cart/', include(cart_urls)),
+    url(r'^checkout/', include(checkout_urls)),
 ]
